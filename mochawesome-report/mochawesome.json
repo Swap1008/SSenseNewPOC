@@ -1,0 +1,137 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-02-18T07:34:46.348Z",
+    "end": "2020-02-18T07:34:59.132Z",
+    "duration": 12784,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3bd38a6f-c6a9-4fbc-be3b-503dbf759ee6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7ba6df8-b22b-46f4-9fe2-644f3748d774",
+          "title": "Report Test",
+          "fullFile": "D:\\Node-Js-Pract\\nodePackage_Demo\\test\\sample-1.spec.js",
+          "file": "\\test\\sample-1.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "Report Test \"before all\" hook",
+              "timedOut": false,
+              "duration": 779,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "browser=await puppeteer.launch({\n    headless:false,\n    slowMo:0,\n    args:[\n        \"--start-maximized\"\n    ]\n});\npage= await browser.newPage();\nawait page.setViewport({\n    width:1366,\n    height:1000\n});",
+              "err": {},
+              "uuid": "8683f599-1601-46fe-9fcf-43de3767e8df",
+              "parentUUID": "f7ba6df8-b22b-46f4-9fe2-644f3748d774",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "Report Test \"after all\" hook",
+              "timedOut": false,
+              "duration": 767,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await browser.close();",
+              "err": {},
+              "uuid": "e1607d2c-cb53-4abe-960a-79589c2da3f5",
+              "parentUUID": "f7ba6df8-b22b-46f4-9fe2-644f3748d774",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should add context",
+              "fullTitle": "Report Test should add context",
+              "timedOut": false,
+              "duration": 11225,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await page.goto('https://admin:admin@qa.ssense.com');\n await page.screenshot({ path: 'screenshots/scr_.png' });\n logReport.setScreenshot(this, 'screenshots/scr_.png', 'message1');",
+              "err": {},
+              "uuid": "699fdecf-27dd-4ce7-9a03-ffdf1ea760e8",
+              "parentUUID": "f7ba6df8-b22b-46f4-9fe2-644f3748d774",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "699fdecf-27dd-4ce7-9a03-ffdf1ea760e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11225,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.1.0"
+    }
+  }
+}
