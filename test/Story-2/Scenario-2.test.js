@@ -5,7 +5,7 @@ const navigationBar=require('../../pages/NavigationBar');
 
 require('dotenv').config();
 
-describe.skip('Scenario 1', () => {
+describe('As a user I have to see respective gender products when a gender is clicked in search UI', () => {
     let browser;
     let page;
 
@@ -18,14 +18,17 @@ describe.skip('Scenario 1', () => {
         // await browser.close();
     })
 
-    it('User can move up/down the suggested brands in search box using keyboard arrow keys',async()=>{
+    it('should be able to login and search for product for Men',async()=>{
         await page.goto(process.env.URL);
         // await page.waitForNavigation();
         loginModule.login(page);
-        await page.waitFor(2000);
-        // await page.waitForNavigation();
-        await page.waitFor(2000);
-        await page.click(navigationBar.MEN_LINK);
+        await page.waitFor(4000);
+        
+        let [search]=await page.$x(navigationBar.SEARCH_XPATH);
+        await page.waitFor(4000);
+
+        search.click();
+        
     });
 
 })
